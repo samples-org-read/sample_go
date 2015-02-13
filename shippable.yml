@@ -2,8 +2,7 @@ language: go
 
 go:
   - 1.2
-  - 1.1
-
+ 
 env:
  global:
   - CI_REPORT=shippable/testresults/junit.xml
@@ -24,7 +23,6 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
-
 script:
   - echo $key
   - echo $foo and $test
@@ -33,5 +31,8 @@ script:
 
 after_script:
   - echo "testing"
+
+cache: true
+
 archive: true
 #test
