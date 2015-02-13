@@ -33,5 +33,7 @@ script:
 
 after_script:
   - echo "testing"
+cache: true
+
 archive: true
 #test
