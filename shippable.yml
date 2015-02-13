@@ -29,9 +29,6 @@ script:
   - go test -coverprofile=coverage.txt -covermode count ./
   - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
 
-after_script:
-  - echo "testing"
-
 cache: true
 
 archive: true
