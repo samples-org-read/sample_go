@@ -24,7 +24,6 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
-
 script:
   - echo $key
   - echo $foo and $test
@@ -35,3 +34,7 @@ after_script:
   - echo "testing"
 archive: true
 #test
+after_success:
+  - echo "success"
+after_failure:
+  - echo "failed"
