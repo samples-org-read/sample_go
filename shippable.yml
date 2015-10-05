@@ -24,12 +24,12 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
-
 script:
   - echo $key
   - echo $foo and $test
   - go test -coverprofile=coverage.txt -covermode count ./
   - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
+  - echo $BRANCH
 
 
 archive: true
